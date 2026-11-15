@@ -1,21 +1,20 @@
-"use client";
 import Image from "next/image";
-import myImageLoader from "../../lib/image.loader";
+import SectionHeading from "./SectionHeading";
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 py-16 text-center">
-      <h2 className="text-3xl mb-8 font-bold">CONTACT ME</h2>
+    <section id="contact" aria-labelledby="contact-title" tabIndex={-1} className="section">
+      <SectionHeading number="08" title="Contact"><span id="contact-title">Let’s connect.</span></SectionHeading>
+      <p className="prose">I’m preparing for opportunities in software development. I’d welcome a conversation about useful projects, learning, and ways I can contribute.</p>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16">
+      <div className="contact-links">
         <a
           href="mailto:renanborsato2@gmail.com"
-          className="flex items-center gap-3 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <Image
-            loader={myImageLoader}
+            unoptimized
             src="/email.svg"
-            alt="Email"
+            alt=""
             width={24}
             height={24}
             className="dark:invert"
@@ -25,20 +24,18 @@ export default function Contact() {
 
         <a
           href="https://www.linkedin.com/in/renanborsato/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 text-blue-600 dark:text-blue-400 hover:underline"
         >
           <Image
-            loader={myImageLoader}
+            unoptimized
             src="/linkedin.svg"
-            alt="LinkedIn"
+            alt=""
             width={24}
             height={24}
             className="dark:invert"
           />
           <span>LinkedIn</span>
         </a>
+        <a href="https://github.com/renan-borsato"><Image unoptimized src="/github.svg" alt="" width={24} height={24} className="dark:invert" /><span>GitHub</span></a>
       </div>
     </section>
   );

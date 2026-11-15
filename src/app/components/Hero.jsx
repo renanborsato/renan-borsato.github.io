@@ -1,33 +1,18 @@
-"use client";
 import Image from "next/image";
+import { introduction } from "../data/portfolio";
 
 export default function Hero() {
-  return (
-    <section id="home" className="scroll-mt-24 py-20">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 relative">
-        <div className="flex justify-center md:justify-start md:w-auto">
-          <Image src="/headshot_nobg.png" alt="me" width={256} height={256} />
-        </div>
-
-        <div className="flex-1 text-left">
-          <p className="text-2xl mb-2">HEY THERE!</p>
-          <h1 className="text-4xl font-bold mb-2">I AM RENAN BORSATO</h1>
-          <p className="text-xl mb-12">FULL STACK DEVELOPER</p>
-          <a
-            href="https://github.com/renan-borsato"
-            className="flex items-center gap-4 text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            <Image
-              src="/github.svg"
-              alt="GitHub"
-              width={20}
-              height={20}
-              className="dark:invert"
-            />
-            VIEW MY WORK
-          </a>
-        </div>
+  return <section id="home" aria-labelledby="home-title" tabIndex={-1} className="hero section">
+    <div className="hero-intro">
+      <div className="portrait-wrap"><Image src="/headshot_nobg.png" alt="Renan Borsato" width={256} height={256} priority unoptimized className="portrait" /></div>
+      <div>
+        <p className="eyebrow">Hey there! I’m</p>
+        <h1 id="home-title">Renan Borsato</h1>
+        <p className="hero-role">Software engineering student</p>
+        <p className="hero-motto">Curiosity in how things work.<br />Purpose in whom they help.</p>
+        <div className="link-row"><a className="button-link" href="#projects">Explore my work <span aria-hidden="true">↓</span></a><a href="#about">Read my résumé <span aria-hidden="true">↗</span></a></div>
       </div>
-    </section>
-  );
+    </div>
+    <div className="hero-story prose">{introduction.map((text) => <p key={text}>{text}</p>)}</div>
+  </section>;
 }

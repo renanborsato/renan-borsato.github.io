@@ -1,74 +1,28 @@
-// src/app/components/About.jsx
-"use client";
-import Image from "next/image";
-import myImageLoader from "../../lib/image.loader";
+import SectionHeading from "./SectionHeading";
 
 export default function About() {
-  const timelineItems = [
-    {
-      title: "INDUSTRIAL AUTOMATION COURSE",
-      description:
-        "Completed a high school technical program focused on programming, robotics, and automation systems, sparking my interest in software development.",
-    },
-    {
-      title: "SOFTWARE DEVELOPMENT INTERNSHIP",
-      description:
-        "Gained hands-on experience building and maintaining web applications, collaborating with a professional development team.",
-    },
-    {
-      title: "SOFTWARE ENGINEERING DEGREE",
-      description:
-        "Deepened knowledge in algorithms, databases, and full stack web development through academic projects and coursework.",
-    },
-    {
-      title: "FULL STACK DEVELOPER ROLE",
-      description:
-        "Currently building scalable, user-friendly applications, integrating frontend and backend technologies in real-world projects.",
-    },
-  ];
-
-  return (
-    <section id="about" className="scroll-mt-24 py-16">
-      <h2 className="text-3xl mb-8 font-bold">ABOUT ME</h2>
-
-      <div className="space-y-4 text-lg">
-        <p>
-          I’m a full stack developer with a passion for building scalable and
-          intuitive web applications. I enjoy turning complex problems into
-          elegant solutions and continuously learning the latest technologies to
-          deliver high-quality results.
-        </p>
-        <p>
-          Over the years, I’ve worked with a variety of frameworks and tools,
-          from frontend libraries like React and Tailwind CSS to backend
-          technologies like Node.js and databases. My focus is always on writing
-          clean, maintainable code and creating seamless user experiences.
-        </p>
-        <p>
-          When I’m not coding, I love exploring new tech trends, contributing to
-          open-source projects, and improving my skills through side projects
-          and challenges. My goal is to create software that makes a real impact
-          and leaves users delighted.
-        </p>
-      </div>
-
-      <h3 className="text-2xl mt-12 mb-6 font-semibold">My timeline:</h3>
-
-      <div className="relative w-full mt-8">
-        <div className="absolute top-2 left-0 right-0 h-0.5 bg-black dark:bg-white -translate-y-1/2"></div>
-
-        <div className="relative flex justify-between">
-          {timelineItems.map((item, index) => (
-            <div key={index} className="flex flex-col items-start w-1/5">
-              <div className="w-4 h-4 bg-black dark:bg-white rounded-full mb-2 z-10" />
-              <h4 className="font-semibold whitespace-pre-line">
-                {item.title}
-              </h4>
-              <p className="text-sm">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <section id="about" aria-labelledby="about-title" tabIndex={-1} className="section">
+    <SectionHeading number="02" title="About & résumé"><span id="about-title">Learning, building, and helping others.</span></SectionHeading>
+    <div className="resume-header">
+      <h3>Renan Borsato</h3><p>IT student · Software development</p>
+      <div className="link-row compact"><a href="mailto:renanborsato2@gmail.com">Email</a><a href="https://www.linkedin.com/in/renanborsato/">LinkedIn</a><a href="https://github.com/renan-borsato">GitHub</a><a href="https://renan-borsato.github.io">Portfolio</a></div>
+      <p className="prose">I bring experience in programming, robotics, and one-on-one math and computer science tutoring. I am developing full stack application skills and preparing for software development opportunities, with a focus on practical problem solving, clear technical communication, and helping learners build independent understanding.</p>
+    </div>
+    <div className="resume-row"><h3>Education</h3><div className="resume-entries">
+      <article><h4>Bachelor of Applied Science (BAS) in Information Technology, Software Engineering</h4><p className="meta">Ensign College · Expected April 2027</p></article>
+      <article><h4>Technical Diploma in Industrial Automation</h4><p className="meta">Federal Institute of Education, Science and Technology · São José dos Campos, Brazil · December 2019</p><p>Studies in programming, robotics, and automation, including a self-balancing robot project completed in 2019.</p></article>
+    </div></div>
+    <div className="resume-row"><h3>Skills</h3><dl className="skills-list">
+      <div><dt>Programming</dt><dd>C, Python, Java, JavaScript, TypeScript, and VBA; programming logic, debugging, and problem solving.</dd></div>
+      <div><dt>Technical foundations</dt><dd>Control algorithms, electronics, and robotics.</dd></div>
+      <div><dt>Frameworks & tools</dt><dd>React, Next.js, Node.js, Tailwind CSS, PostgreSQL, Git, Docker, AWS, and Vercel.</dd></div>
+      <div><dt>Communication</dt><dd>Individual tutoring, lesson planning, technical explanation, and adapting instruction to different learners.</dd></div>
+    </dl></div>
+    <div className="resume-row"><h3>Work experience</h3><div className="resume-entries">
+      <article><h4>Math and Computer Science Tutor</h4><p className="meta">Ensign College · February 2026–Present</p><ul className="bullet-list"><li>Support students individually with programming logic, debugging, and problem solving.</li><li>Adapt explanations to help learners develop independent understanding.</li><li>Supported more than 40 students and averaged more than 20 appointments per month.</li><li>Helped contribute to an increase of more than 50% in scheduled appointments.</li></ul></article>
+      <article><h4>EnglishConnect Instructor</h4><p className="meta">BYU-Pathway · April 2023–August 2024</p><ul className="bullet-list"><li>Taught English to more than 10 adult learners using structured lesson plans.</li><li>Adapted activities for learners with different levels of experience.</li><li>Encouraged participation and helped learners develop confidence.</li></ul></article>
+    </div></div>
+    <div className="resume-row"><h3>Volunteer experience</h3><article><h4>Pantry Volunteer</h4><p className="meta">Tabitha’s Way · October 2024–April 2025</p><ul className="bullet-list"><li>Sorted, inspected, and stocked donated food.</li><li>Helped maintain supplies at a pantry serving more than 1,700 people monthly.</li><li>Worked with other volunteers to support reliable pantry operations.</li></ul></article></div>
+    <div className="resume-row"><h3>Technical project</h3><article><h4><a href="#robot">Self-Balancing Robot</a></h4><p className="meta">Industrial Automation Program · 2019</p><p>Designed and programmed a functional robot using C, electronics, and control algorithms. Worked within a small budget and adjusted the software to compensate for hardware limitations, developing practical troubleshooting skills.</p></article></div>
+  </section>;
 }

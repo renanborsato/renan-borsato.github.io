@@ -7,15 +7,16 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  description: "Showcasing my projects and skills",
+  description: "Renan Borsato, IT student at Ensign College. Explore my résumé, robotics and teaching experience, and commitments to service, learning, and integrity.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <Navbar />
-        <main className="max-w-6xl mx-auto px-6 py-12">{children}</main>
+        <main id="main-content" tabIndex={-1} className="page-shell">{children}</main>
         <Footer />
       </body>
     </html>
