@@ -41,7 +41,18 @@ export const projects = [
     "kind": "Web application · Live",
     "title": "MovieList",
     "context": "Movie discovery and personal movie lists",
-    "peerFeedback": "Peer testing confirmed that guest-list creation worked, but revealed difficulties adding movies and errors loading movie data and importing guest lists into an account. The reviewer appreciated the guest-access option and attention to data protection. Based on this feedback, my next priorities are clearer movie-addition steps, more helpful error messages, and investigating loading and import failures while preserving users’ saved lists.",
+    "peerFeedback": "Peer testing confirmed that guest-list creation worked, but revealed difficulties adding movies and errors loading movie data and importing guest lists into an account. The reviewer appreciated the guest-access option and attention to data protection. I used this feedback to implement clearer movie-addition controls, error recovery, and stronger guest-data preservation in the local refinement described below.",
+    "refinement": {
+      "status": "Implemented and tested locally · Deployment verification pending",
+      "changes": [
+        { "title": "Clearer movie addition", "text": "Replaced clickable result text with labelled, keyboard-operable buttons and added search instructions, loading and empty states, and save confirmation. Failed saves retain the query and results so the user can retry. Debouncing and cancellation prevent stale search results from reappearing." },
+        { "title": "Movie-loading recovery", "text": "Added separate messages for network failures, unavailable movie service, missing movies, and rate limits, with retry controls. A check of the deployed search endpoint returned HTTP 503 because the movie service was not configured. The application now handles that failure explicitly; restoring live search still requires the private TMDB credential in the deployment." },
+        { "title": "Safer account import", "text": "Added a signed-in import view with a dedicated retry action and the option to continue without importing. Import failures now explain session, permission, storage-configuration, and rate-limit problems. Unsaved guest lists remain in the browser; a list edited during upload is retained for retry instead of being deleted." }
+      ],
+      "ethics": "These changes apply service through clearer instructions and keyboard access, honesty through accurate failure messages, and responsibility through preserving user-created lists. Recovery messages are available in English, Spanish, and Portuguese. No broader accessibility or production privacy certification is claimed.",
+      "validation": "21 service tests and 4 interaction tests passed, along with lint checks and the MovieList production build. Checks cover safe movie errors, failed and partial imports, edits during upload, keyboard selection, failed-save retries, stale results, and signed-in import recovery. Interaction tests use a simulated browser and controlled service responses.",
+      "remaining": "The source changes are local and have not been deployed. Before calling the live issues resolved, configure the private TMDB credential in Vercel, deploy the refinement, and verify real movie search, list updates, guest-to-account import, and account permissions. The live-site link above points to the existing deployment."
+    },
     "role": "Website development and deployment",
     "tools": "React, Vite, TMDB API, Appwrite, browser storage, and Vercel",
     "links": [

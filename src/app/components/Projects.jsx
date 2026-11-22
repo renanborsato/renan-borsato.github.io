@@ -11,7 +11,15 @@ export default function Projects() {
         {project.links && <div className="link-row" aria-label={`${project.title} links`}>{project.links.map((link) => <a key={link.url} href={link.url}>{link.label} <span aria-hidden="true">↗</span></a>)}</div>}
       </div>
       <div className="prose project-story">{project.paragraphs.map((paragraph, i) => <div key={paragraph}><h4>{["The work", "Challenge & outcome", "What I learned · Faith & growth"][i]}</h4><p>{paragraph}</p></div>)}
-        {project.peerFeedback && <div><h4>Peer feedback & next steps</h4><p>{project.peerFeedback}</p></div>}
+        {project.peerFeedback && <div><h4>Peer feedback & response</h4><p>{project.peerFeedback}</p></div>}
+        {project.refinement && <section className="project-refinement" aria-labelledby={`${project.id}-refinements`}>
+          <h4 id={`${project.id}-refinements`}>Refinements & verification</h4>
+          <p className="meta">{project.refinement.status}</p>
+          <ul className="bullet-list">{project.refinement.changes.map(change => <li key={change.title}><strong>{change.title}.</strong> {change.text}</li>)}</ul>
+          <p><strong>Ethical integration.</strong> {project.refinement.ethics}</p>
+          <p><strong>Validation.</strong> {project.refinement.validation}</p>
+          <p><strong>Deployment status.</strong> {project.refinement.remaining}</p>
+        </section>}
       </div>
     </article>)}</div>
   </section>;

@@ -104,6 +104,8 @@
   .project-facts dd { color: var(--muted); }
   .project-story { display: grid; gap: 24px; font-size: 1rem; }
   .project-story h4 { margin-bottom: 8px; }
+  .project-refinement { min-width: 0; }
+  .project-refinement .bullet-list { margin-bottom: 20px; }
   .principle { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 56px; padding: 36px 0; border-top: 1px solid var(--line); }
   .principle-title > span { font-family: var(--mono); font-size: .8rem; }
   .principle-title h3 { margin-top: 12px; font-size: 1.4rem; }
