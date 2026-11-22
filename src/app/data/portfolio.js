@@ -37,6 +37,23 @@ export const principles = [
 
 export const projects = [
   {
+    "id": "movielist",
+    "kind": "Web application · Live",
+    "title": "MovieList",
+    "context": "Movie discovery and personal movie lists",
+    "role": "Website development and deployment",
+    "tools": "React, Vite, TMDB API, Appwrite, browser storage, and Vercel",
+    "links": [
+      { "label": "Visit MovieList", "url": "https://movielist-renan.vercel.app/" },
+      { "label": "View source on GitHub", "url": "https://github.com/renanborsato/movielist" }
+    ],
+    "paragraphs": [
+      "I built MovieList to help people discover movies and organize personal movie lists. Users can search movies, view details and posters, create or delete lists, add or remove movies, and rate them from zero to five stars. The interface supports English, Spanish, and Portuguese, with light and dark themes and color choices.",
+      "The current version migrates the original React and Quarkus project to a React and Vite application with Appwrite accounts and data services, deployed on Vercel. A key challenge is moving guest lists from browser storage into an account without losing data: each local list is removed only after its cloud write succeeds, and failed imports can be retried. Movie requests go through a restricted server-side TMDB proxy. The repository includes tests for guest persistence, import failures and retries, and proxy boundaries.",
+      "This project connects service with practical choices about privacy and reliability. People can start as guests, while account lists are private to their owner. Protecting lists during account import reflects respect for the time users invest in the application. Integrity also means explaining limitations clearly: clearing browser data removes guest lists, and the community, profile, and settings pages remain placeholders. Accessibility and clear data-storage explanations are areas I want to keep reviewing as I refine the application."
+    ]
+  },
+  {
     "id": "robot",
     "kind": "Technical project · Completed",
     "title": "Self-Balancing Robot",
