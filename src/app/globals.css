@@ -93,6 +93,8 @@
   .resume-entries { display: grid; gap: 32px; }
   .bullet-list { list-style: disc; padding-left: 22px; margin-top: 14px; }
   .bullet-list li + li { margin-top: 6px; }
+  .ethical-response { padding-left: 24px; margin: 16px 0; }
+  .ethical-response li + li { margin-top: 16px; }
   .skills-list { display: grid; gap: 16px; }
   dt { font-weight: 700; }
   dd { margin: 3px 0 0; }
