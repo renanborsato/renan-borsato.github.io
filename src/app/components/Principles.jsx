@@ -12,9 +12,9 @@ export default function Principles() {
     </article>)}</div>
     <div className="materials-heading"><h3>Spiritual materials & everyday application</h3><p className="prose">These readings help me connect the principles I believe with the choices I make as a student, tutor, and future developer.</p></div>
     <div className="materials-grid">{materials.map((material) => <article className="material-card" key={material.id}>
-      <h4><a href={`${material.url}&id=p${material.verse}#p${material.verse}`}>{material.title}</a></h4>
+      <h4><a href={material.verse ? `${material.url}&id=p${material.verse}#p${material.verse}` : material.url}>{material.title}</a></h4>
       <p>{material.description}</p>
-      <p className="citation"><a href={`#ref-${material.id}`}>(The Church of Jesus Christ of Latter-day Saints, n.d.-{material.letter})</a></p>
+      <p className="citation"><a href={`#ref-${material.id}`}>({material.citation || `The Church of Jesus Christ of Latter-day Saints, n.d.-${material.letter}`})</a></p>
     </article>)}</div>
   </section>;
 }

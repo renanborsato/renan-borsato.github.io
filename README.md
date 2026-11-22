@@ -2,7 +2,7 @@
 
 Renan Borsato’s continuous-page portfolio, built with Next.js 14, React, and Tailwind CSS and exported as a static site for GitHub Pages.
 
-The page contains an introduction, an IT résumé, four project and experience descriptions, guiding principles with eight spiritual readings, an ethics analysis, a personal reflection, references, and contact links. Navigation uses native URL fragments (`#home`, `#about`, `#projects`, `#faith`, `#ethics`, `#reflection`, `#references`, and `#contact`). Individual project entries and references also support direct links, including `#movielist`.
+The page contains an introduction, an IT résumé, four project and experience descriptions, guiding principles with nine spiritual readings, an ethics analysis, a temple reflection with a Week 4 agency reflection, references, and contact links. Navigation uses native URL fragments (`#home`, `#about`, `#projects`, `#faith`, `#ethics`, `#reflection`, `#references`, and `#contact`). Individual project entries and references also support direct links, including `#movielist`.
 
 Personal content comes from the supplied portfolio draft and confirmed follow-up details. MovieList is featured with its live Vercel URL and GitHub source link; its technical description reflects the public repository README, package manifest, and deployed application. Future additions may include robot photos/code and permitted teaching resources; do not substitute sample achievements or invented evidence.
 

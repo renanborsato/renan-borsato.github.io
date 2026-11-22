@@ -132,7 +132,7 @@ export const materials = [
     "id": "dc58",
     "letter": "c",
     "title": "Doctrine and Covenants 58:27–28 — Initiative and agency",
-    "description": "This passage encourages willing action. It connects my spiritual commitments with taking responsibility for projects and career preparation. Application: seek feedback and begin useful work without waiting for someone to direct every step.",
+    "description": "This passage encourages willing action. For my Week 4 reflection, I connect agency with choosing to build MovieList, seek feedback, and address problems another person encountered. The result is an opportunity to practice both technical responsibility and humility. Application: document one choice I made, its effect on someone else, and a useful next action instead of waiting for every uncertainty to disappear.",
     "chapter": "Doctrine and Covenants 58",
     "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng",
     "verse": "27"
@@ -172,5 +172,16 @@ export const materials = [
     "chapter": "Articles of Faith 1",
     "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng",
     "verse": "13"
+  },
+  {
+    "id": "wirthlin",
+    "letter": "i",
+    "title": "Come What May, and Love It — Responding to setbacks",
+    "description": "Elder Joseph B. Wirthlin connects growth through adversity with an eternal perspective and trust in Heavenly Father and Jesus Christ. I can apply that counsel when a project fails or career plans feel uncertain: acknowledge the problem, respond patiently, and keep making responsible choices. Application: use the next setback as a prompt to identify what I can change and seek help where I need it.",
+    "chapter": "Come What May, and Love It",
+    "url": "https://www.churchofjesuschrist.org/study/general-conference/2008/10/come-what-may-and-love-it?lang=eng",
+    "author": "Wirthlin, J. B.",
+    "date": "2008, October",
+    "citation": "Wirthlin, 2008"
   }
 ];

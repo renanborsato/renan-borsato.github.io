@@ -141,6 +141,7 @@
   .citation a { color: var(--muted); }
   .essay { margin-left: auto; margin-right: auto; }
   .essay h3 { font-size: 1.35rem; margin-bottom: 20px; }
+  .essay .week-four-reflection { margin-top: 48px; }
   .essay h4 { margin: 28px 0 14px; }
   .essay > .meta { margin-top: -10px; margin-bottom: 24px; }
   .reference-list { max-width: 86ch; padding-left: 24px; list-style: none; }
