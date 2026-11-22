@@ -10,6 +10,7 @@ Personal content comes from the supplied portfolio draft and confirmed follow-up
 
 - `src/app/page.jsx` sets the section order.
 - `src/app/data/portfolio.js` holds the introduction, project descriptions, guiding principles, and spiritual readings.
+- `src/app/data/movielistReport.js` and `src/app/components/RefinementReport.jsx` provide the MovieList refinement report at `#movielist-refinement-report`, including before-and-after behavior, decision rationale, ethics, recorded validation, source evidence, and remaining live acceptance checks.
 - `src/app/components/About.jsx` contains the résumé; `Ethics.jsx`, `Reflection.jsx`, and `References.jsx` contain their respective sections.
 - `src/app/components/Navbar.jsx` provides the sticky navigation, active-section indicator, mobile menu with Escape-key support, and persistent dark-mode toggle.
 - `src/app/globals.css` sets responsive layouts, focus indicators, readable text widths, and header clearance for anchors. Smooth scrolling is disabled when the visitor requests reduced motion.

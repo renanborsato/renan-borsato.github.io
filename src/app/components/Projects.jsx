@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import { projects } from "../data/portfolio";
+import RefinementReport from "./RefinementReport";
 
 export default function Projects() {
   return <section id="projects" aria-labelledby="projects-title" tabIndex={-1} className="section">
@@ -9,18 +10,12 @@ export default function Projects() {
       <div className="project-sidebar"><span className="project-number" aria-hidden="true">0{index + 1}</span><p className="eyebrow">{project.kind}</p><h3>{project.title}</h3><p className="meta">{project.context}</p>
         <dl className="project-facts"><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>Tools & skills</dt><dd>{project.tools}</dd></div></dl>
         {project.links && <div className="link-row" aria-label={`${project.title} links`}>{project.links.map((link) => <a key={link.url} href={link.url}>{link.label} <span aria-hidden="true">↗</span></a>)}</div>}
+        {project.refinement && <p className="meta"><a href={`#${project.id}-refinement-report`}>Read the refinement report</a></p>}
       </div>
       <div className="prose project-story">{project.paragraphs.map((paragraph, i) => <div key={paragraph}><h4>{["The work", "Challenge & outcome", "What I learned · Faith & growth"][i]}</h4><p>{paragraph}</p></div>)}
         {project.peerFeedback && <div><h4>Peer feedback & response</h4><p>{project.peerFeedback}</p></div>}
-        {project.refinement && <section className="project-refinement" aria-labelledby={`${project.id}-refinements`}>
-          <h4 id={`${project.id}-refinements`}>Refinements & verification</h4>
-          <p className="meta">{project.refinement.status}</p>
-          <ul className="bullet-list">{project.refinement.changes.map(change => <li key={change.title}><strong>{change.title}.</strong> {change.text}</li>)}</ul>
-          <p><strong>Ethical integration.</strong> {project.refinement.ethics}</p>
-          <p><strong>Validation.</strong> {project.refinement.validation}</p>
-          <p><strong>Deployment status.</strong> {project.refinement.remaining}</p>
-        </section>}
       </div>
+      {project.refinement && <RefinementReport projectId={project.id} refinement={project.refinement} />}
     </article>)}</div>
   </section>;
 }
