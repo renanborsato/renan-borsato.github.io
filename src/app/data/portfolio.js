@@ -41,6 +41,7 @@ export const projects = [
     "kind": "Web application · Live",
     "title": "MovieList",
     "context": "Movie discovery and personal movie lists",
+    "peerFeedback": "Peer testing confirmed that guest-list creation worked, but revealed difficulties adding movies and errors loading movie data and importing guest lists into an account. The reviewer appreciated the guest-access option and attention to data protection. Based on this feedback, my next priorities are clearer movie-addition steps, more helpful error messages, and investigating loading and import failures while preserving users’ saved lists.",
     "role": "Website development and deployment",
     "tools": "React, Vite, TMDB API, Appwrite, browser storage, and Vercel",
     "links": [

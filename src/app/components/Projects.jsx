@@ -10,7 +10,9 @@ export default function Projects() {
         <dl className="project-facts"><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>Tools & skills</dt><dd>{project.tools}</dd></div></dl>
         {project.links && <div className="link-row" aria-label={`${project.title} links`}>{project.links.map((link) => <a key={link.url} href={link.url}>{link.label} <span aria-hidden="true">↗</span></a>)}</div>}
       </div>
-      <div className="prose project-story">{project.paragraphs.map((paragraph, i) => <div key={paragraph}><h4>{["The work", "Challenge & outcome", "What I learned · Faith & growth"][i]}</h4><p>{paragraph}</p></div>)}</div>
+      <div className="prose project-story">{project.paragraphs.map((paragraph, i) => <div key={paragraph}><h4>{["The work", "Challenge & outcome", "What I learned · Faith & growth"][i]}</h4><p>{paragraph}</p></div>)}
+        {project.peerFeedback && <div><h4>Peer feedback & next steps</h4><p>{project.peerFeedback}</p></div>}
+      </div>
     </article>)}</div>
   </section>;
 }
