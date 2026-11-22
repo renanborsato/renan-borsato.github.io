@@ -104,6 +104,13 @@
   .project-facts dd { color: var(--muted); }
   .project-story { display: grid; gap: 24px; font-size: 1rem; }
   .project-story h4 { margin-bottom: 8px; }
+  .peer-review { margin-top: 44px; padding: 32px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+  .peer-review h3 { margin: 10px 0; font-size: 1.4rem; }
+  .peer-review > .meta { margin-bottom: 20px; }
+  .peer-review-details { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .peer-review-details summary { cursor: pointer; font-weight: 600; color: var(--blue); }
+  .peer-review-content h4 { margin: 28px 0 12px; }
+  .peer-review-content p + p { margin-top: 16px; }
   .refinement-report { grid-column: 1 / -1; min-width: 0; border-top: 1px solid var(--line); padding-top: 32px; font-size: 1rem; }
   .refinement-report > h4 { font-size: 1.35rem; margin: 0 0 8px; }
   .refinement-report > h5 { font-size: 1.1rem; margin: 30px 0 12px; }

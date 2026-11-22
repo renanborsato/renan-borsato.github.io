@@ -1,11 +1,12 @@
 import SectionHeading from "./SectionHeading";
 import { projects } from "../data/portfolio";
 import RefinementReport from "./RefinementReport";
+import PeerReview from "./PeerReview";
 
 export default function Projects() {
   return <section id="projects" aria-labelledby="projects-title" tabIndex={-1} className="section">
     <SectionHeading number="03" title="Projects & experience"><span id="projects-title">Practical work. Lasting lessons.</span></SectionHeading>
-    <p className="section-lead">From a live movie-list application to robotics and teaching, these projects and experiences connect practical problem solving with service.</p>
+    <p className="section-lead">From a live movie-list application to robotics and teaching, these projects and experiences connect practical problem solving with service. <a href="#peer-review">Read my completed peer evaluation of Michael’s project.</a></p>
     <div className="project-list">{projects.map((project, index) => <article id={project.id} tabIndex={-1} className="project-card" key={project.id}>
       <div className="project-sidebar"><span className="project-number" aria-hidden="true">0{index + 1}</span><p className="eyebrow">{project.kind}</p><h3>{project.title}</h3><p className="meta">{project.context}</p>
         <dl className="project-facts"><div><dt>My role</dt><dd>{project.role}</dd></div><div><dt>Tools & skills</dt><dd>{project.tools}</dd></div></dl>
@@ -17,5 +18,6 @@ export default function Projects() {
       </div>
       {project.refinement && <RefinementReport projectId={project.id} refinement={project.refinement} />}
     </article>)}</div>
+    <PeerReview />
   </section>;
 }
